@@ -847,6 +847,25 @@ h1 {
   unicode-bidi: isolate;
 }
 
+/* Tablets */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* single column */
+  }
+  .contact-container {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+
 :root {
   --bg: #080b14;
   --bg2: #0d1020;
