@@ -9,7 +9,7 @@
     for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
     var url = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
     var a = document.createElement('a');
-    a.href = url; a.download = 'RohitRanjan_CV.pdf';
+    a.href = url; a.download = 'CV_RohitRanjan.pdf';
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
   });
