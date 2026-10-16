@@ -87,6 +87,8 @@
 
   const phrases = [
     'Selenium + Java + JavaScript',
+    'Python + Robot Framework + Pytest',
+    'API Testing + Postman + API Automation',
     'Ui Testing + JIRA + Regression Testing',
     'Jenkins + Maven + CI/CD Pipelines',
     'Infosys · LTM'
