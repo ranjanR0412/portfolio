@@ -50,6 +50,38 @@
   console.log(`Difference: ${years}${daysPlus}`);
 })();
 
+(function () {
+  const exp = document.getElementById('curr_id');
+  // Define the two dates
+  const date1 = new Date("2026-07-06"); // YYYY-MM-DD format
+  const date2 = new Date(); // today's date
+
+  // Calculate total difference in months
+  let years = date2.getFullYear() - date1.getFullYear();
+  let months = date2.getMonth() - date1.getMonth();
+ let days = date2.getDate() - date1.getDate();
+
+  // Adjust if days difference is negative
+  if (days < 0) {
+    months--;
+    // Get days in the previous month of date2
+    const prevMonth = new Date(date2.getFullYear(), date2.getMonth(), 0);
+    days += prevMonth.getDate();
+  }
+
+  // Adjust if months difference is negative
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  if(days >= 0 ){
+    daysPlus = '+ Months';
+  }
+
+  const totalExp = `Experience : ${months}${daysPlus}`;
+  exp.innerText = totalExp;
+})();
 
 //typewriter effect
 
